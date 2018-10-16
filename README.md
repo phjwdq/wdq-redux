@@ -1,0 +1,2 @@
+# wdq-redux
+react redux
