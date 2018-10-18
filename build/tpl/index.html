@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="format-detection" content="address=no">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="max-age=0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Expires" content="Sunday 26 October 2016 01:00 GMT">
+    <meta http-equiv="Pragma" content="no-store">
+    <meta name="x5-orientation" content="portrait">
+    <meta content="telephone=no" name="format-detection">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.innolife.cc/wap/ddb.ico" media="screen" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+    <!--<script src="https://g.alicdn.com/sj/lib/zepto/zepto.min.js"></script>-->
+    <script>
+        /* eslint-disable */
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?9fa1d8f25e5b93a2951782cd51d1b596";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        window.mbUtil=(function(f,e){var c=navigator.userAgent,b=/android|adr/gi.test(c),a=/iphone|ipod|ipad/gi.test(c)&&!b,d=b||a;return{isAndroid:b,isIos:a,isMobile:d,isNewsApp:/NewsApp\/[\d\.]+/gi.test(c),isWeixin:/MicroMessenger/gi.test(c),isQQ:/QQ\/\d/gi.test(c),isYixin:/YiXin/gi.test(c),isWeibo:/Weibo/gi.test(c),isTXWeibo:/T(?:X|encent)MicroBlog/gi.test(c),tapEvent:d?"tap":"click",fixScreen:function(){var x=e.querySelector('meta[name="viewport"]'),A=x?x.content:"",y=A.match(/initial\-scale=([\d\.]+)/),p=A.match(/width=([^,\s]+)/);if(!x){var l=e.documentElement,s=l.dataset.mw||750,h=a?Math.min(f.devicePixelRatio,3):1,B=1/h,z;l.removeAttribute("data-mw");l.dataset.dpr=h;x=e.createElement("meta");x.name="viewport";x.content=j(B);l.firstElementChild.appendChild(x);var i=function(){var w=l.getBoundingClientRect().width;if(w/h>s){w=s*h}var C=w/16;l.style.fontSize=C+"px";window.__rem__=C};f.addEventListener("resize",function(){clearTimeout(z);z=setTimeout(i,300)},false);f.addEventListener("pageshow",function(w){if(w.persisted){clearTimeout(z);z=setTimeout(i,300)}},false);i()}else{if(d&&!y&&(p&&p[1]!="device-width")){var v=parseInt(p[1]),m=f.innerWidth||v,n=f.outerWidth||m,u=f.screen.width||m,k=f.screen.availWidth||m,r=f.innerHeight||v,t=f.outerHeight||r,g=f.screen.height||r,o=f.screen.availHeight||r,q=Math.min(m,n,u,k,r,t,g,o),B=q/v;if(B<1){x.content=A+","+j(B)}}}function j(w){return"initial-scale="+w+",maximum-scale="+w+",minimum-scale="+w+",user-scalable=no"}},getSearch:function(g){g=g||f.location.search;var i={},h=new RegExp("([^?=&]+)(=([^&]*))?","g");g&&g.replace(h,function(k,j,m,l){i[j]=l});return i}}})(window,document);(function(){if(typeof WeixinJSBridge=="object"&&typeof WeixinJSBridge.invoke=="function"){a()}else{if(document.addEventListener){document.addEventListener("WeixinJSBridgeReady",a,false)}else{if(document.attachEvent){document.attachEvent("WeixinJSBridgeReady",a);document.attachEvent("onWeixinJSBridgeReady",a)}}}function a(){WeixinJSBridge.invoke("setFontSizeCallback",{fontSize:0});WeixinJSBridge.on("menu:setfont",function(){WeixinJSBridge.invoke("setFontSizeCallback",{fontSize:0})})}})();mbUtil.fixScreen();
+        var feRoot = '<%= htmlWebpackPlugin.options.feRoot %>'
+        var urlPrefix = '<%= htmlWebpackPlugin.options.urlPrefix %>'
+
+        var uid = '{{tplData.uid}}';
+        var openid = '{{tplData.openid}}';
+        var unionid = '{{tplData.unionid}}'
+
+        wx.config({
+            debug: false,
+            appId: "{{tplData.appid}}",
+            timestamp: "{{tplData.timestamp}}",
+            nonceStr: "{{tplData.noncestr}}",
+            signature: "{{tplData.signature}}",
+            jsApiList: [
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'getBrandWCPayRequest'
+            ]
+        })
+    </script>
+</head>
+<body>
+    <div id="app">
+        <!--<div class='pageloading'>-->
+            <!--<div class="loading-banner"></div>-->
+            <!--<div class="loading-namebox">-->
+                <!--<div class="loading-name">-->
+                    <!--<div class="loading-nametit"></div>-->
+                    <!--<div class="loading-nametit"></div>-->
+                    <!--<div class="loading-nametit"></div>-->
+                <!--</div>-->
+                <!--<div class="loading-logo"></div>-->
+            <!--</div>-->
+            <!--<div class="loading-scrollnotice"></div>-->
+            <!--<div class="loading-product-con"></div>-->
+            <!--<div class="loading-product-con2"></div>-->
+            <!--<div class="loading-product-con"></div>-->
+            <!--<div class="loading-product-con2"></div>-->
+            <!--<div class="loading-product-con"></div>-->
+            <!--<div class="loading-product-con2"></div>-->
+        <!--</div>-->
+    </div>
+</body>
+</html>

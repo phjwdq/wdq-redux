@@ -1,0 +1,252 @@
+/**
+ * @file global.styl
+ * @author luwenlong
+ */
+
+@import './mixin.styl'
+
+$stone = #dfdfdf
+$-border-color = #e6e6e6
+
+:global
+    @import './reset.styl'
+    .log-reg-field
+        height px2rem(122)
+        flexbox()
+        justify-content(space-between)
+        align-items(center)
+        border-bottom 1px solid #aeb9ca
+        position relative
+        color #b2bbca
+        input
+            px2px(30)
+            height 100%
+            width 100%
+            border none
+            background none
+            color #ff9500
+        em
+            min-width px2rem(50)
+            height 100%
+            inline-flex()
+            justify-content(center)
+            align-items(center)
+    .arrow-left
+        width px2rem(22)
+        height px2rem(40)
+        background url('../imgs/arrow-left.png') no-repeat
+        background-size 100% 100%
+        position absolute
+        left px2rem(30)
+        top px2rem(24)
+    .icon-close
+        display inline-block
+        width px2rem(52)
+        height px2rem(52)
+        background url('../imgs/icon-close.png') no-repeat
+        background-size 100% 100%
+    // alert
+    .ui-alert-content
+        width px2rem(610)
+        background #fff
+        color #5f6976
+        border-radius px2rem(14)
+        px2px(32)
+        margin 0 auto
+        p
+            line-height 1.5
+            padding px2rem(83) px2rem(32) px2rem(66)
+            text-align center
+
+    .ui-alert-btn
+        color #ff9500
+        height px2rem(90)
+        line-height px2rem(90)
+        text-align center
+        border-top 1px solid #dedede
+        px2px(36)
+    .pageloading
+        width 100vw
+        height 100vh
+        flexbox()
+        justify-content(center)
+        align-items(center)
+        overflow hidden
+        background #fff
+        px2px(30)
+        .loading-banner
+            width 100%
+            height px2rem(350)
+            background $stone
+        .loading-namebox
+            flexbox()
+            justify-content(space-between)
+            align-item(center)
+            margin-top px2rem(32)
+            padding 0 px2rem(31)
+            .loading-name
+                width 100%
+                .loading-nametit
+                    width px2rem(432)
+                    height px2rem(40)
+                    margin-bottom px2rem(30)
+                    background $stone
+            .loading-logo
+                width px2rem(280)
+                height px2rem(180)
+                background $stone
+        .loading-scrollnotice
+            width px2rem(688)
+            height px2rem(50)
+            background $stone
+            margin px2rem(18) px2rem(31) 0 px2rem(31)
+        .loading-product-con
+            height px2rem(180)
+            background $stone
+            margin px2rem(30) px2rem(31) 0 px2rem(31)
+        .loading-product-con2
+            height px2rem(50)
+            background $stone
+            margin px2rem(30) px2rem(31) 0 px2rem(31)
+
+
+    // scompare 页面开始
+    .globalModalExit
+        position absolute
+        top 0
+        right 0
+        width px2rem(100)
+        height px2rem(100)
+        z-index 99
+    // TODO sticky
+    .swiperWrap
+        flexbox()
+    // MODAL定义
+    .scompareCont
+        .globalModal > div
+            border-radius px2rem(34) !important
+
+    .radarModalTitle
+        px2px(36)
+        color #4a4a4a
+        line-height 1.5
+        padding px2rem(54) px2rem(164) 0
+        text-align center
+        em
+            color #f49b1f
+    // 雷达图MODAL展示
+    .radarModal
+        height px2rem(1000)
+        .radarItem
+            height px2rem(685)
+        .big_pagi
+            position absolute
+            bottom px2rem(40)
+            width 100%
+            flexbox()
+            justify-content(center)
+            span
+                width px2rem(18)
+                height px2rem(18)
+                background #a6a6a6
+                opacity 1
+                display inline-block
+                margin-right px2rem(10)
+                border-radius px2rem(18)
+                &:last-child
+                    margin-right 0
+            .swiper-pagination-bullet-active
+                background #f49b1f
+
+    // 产品展示
+    .scprods
+        overflow auto
+        flex(1, 1, 0%)
+        .prodItem
+            width px2rem(174)
+            background #fff
+            flex(1, 0, auto)
+            h3
+            //.prodName
+                background #f2f2f2
+                // 同下 TODO
+                height px2rem(185)
+                color #F49B1F
+                flexbox()
+                flex-direction(column)
+                flex-wrap(wrap)
+                justify-content(flex-start)
+                align-items(center)
+                border-right 1px solid #e8e8e8
+                //font-weight 200
+                span
+                    line-height 1.5
+                    text-align center
+                em
+                    margin-top px2rem(25)
+                    margin-bottom px2rem(10)
+                    align-self(center)
+                    color #5F6976
+                    px2px(28)
+            h4
+                //width 100%
+                height px2rem(228)
+                line-height px2rem(228)
+                text-indent px2rem(28)
+                border-right 1px solid #e8e8e8
+                background #fff
+                >div
+                    margin 0 auto
+            h5
+                width 100%
+                height px2rem(64)
+                line-height px2rem(64)
+                text-indent px2rem(23)
+                border-bottom 1px solid $-border-color
+                background #f5f5f5
+                color #4a4a4a
+            h6
+                width 100%
+                height px2rem(78)
+                line-height 1.5
+                flexbox()
+                justify-content(center)
+                align-items(center)
+                border-right 1px solid $-border-color
+                border-bottom 1px solid $-border-color
+                color #4a90e2
+                span
+                    width px2rem(26)
+                    height px2rem(20)
+                    &.scompare_yes
+                        background url('../imgs/icon_yes.png') no-repeat center center
+                        background-size 100% 100%
+            p
+                width 100%
+                text-align center
+                height px2rem(60)
+                line-height px2rem(60)
+                color #5f6976
+                background #fff
+                opacity 0 !important
+    .swiper-wrapper1
+        position relative
+        width 100%
+        height 100%
+        z-index 1
+        display -webkit-box
+        display -ms-flexbox
+        display flex
+        transition-property transform
+        box-sizing content-box
+    .swiper-wrapper2
+        position relative
+        width 100%
+        height 100%
+        z-index 1
+        display -webkit-box
+        display -ms-flexbox
+        // display: flex;
+        transition-property transform
+        box-sizing content-box
+    // scompare 页面结束

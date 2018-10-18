@@ -1,0 +1,80 @@
+{
+  "name": "wdq-redux",
+  "version": "1.0.0",
+  "description": "react redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "APP_ENV=dev node ./build/devServer",
+    "build": "webpack --config build/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/phjwdq/wdq-redux.git"
+  },
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "author": "wdq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phjwdq/wdq-redux/issues"
+  },
+  "homepage": "https://github.com/phjwdq/wdq-redux#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-plugin-react-css-modules": "^3.4.2",
+    "classnames": "^2.2.6",
+    "cookies": "^0.7.2",
+    "fastclick": "^1.0.6",
+    "history": "^4.7.2",
+    "immutable": "^3.8.2",
+    "keymirror": "^0.1.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-import": "^1.9.1",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "cache-loader": "^1.2.2",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.8.1",
+    "postcss-import": "^12.0.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-modules-values": "^1.3.0",
+    "precss": "^3.1.2",
+    "react-hot-loader": "^4.3.11",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-logger": "^3.0.6",
+    "style-loader": "^0.23.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "sugarss": "^2.0.0",
+    "thread-loader": "^1.2.0",
+    "url-loader": "^1.1.2",
+    "vconsole": "^3.2.0",
+    "webpack": "^4.21.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
