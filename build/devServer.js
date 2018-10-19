@@ -36,7 +36,12 @@ const server = new WebpackDevServer(compiler, {
 
     },
     proxy: {
-
+        '/api': {
+            target: 'https://www.inno-life.cc',
+            // target: 'http://123.57.81.151:10091',
+            secure: false,
+            // pathRewrite: {"^/api": ""}
+        }
     }
 })
 

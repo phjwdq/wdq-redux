@@ -9,9 +9,9 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
 export default class PageLoading extends Component {
-    // static contextTypes = {
-        // allData: PropTypes.object.isRequired,
-    // }
+    static contextTypes = {
+        allData: PropTypes.object.isRequired,
+    }
 
     constructor (props, context) {
         super(props, context)

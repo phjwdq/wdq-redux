@@ -25,7 +25,8 @@ const basePlugins = [
 const injectVars = {
     title: config.title,
     feRoot: config.feRoot,
-    urlPrefix: config.urlPrefix
+    urlPrefix: config.urlPrefix,
+    apiPath: config.apiPath
 }
 
 const devPlugins = [

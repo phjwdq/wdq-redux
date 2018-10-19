@@ -10,7 +10,7 @@ import {hot} from 'react-hot-loader'
 import Loadable from 'react-loadable'
 import PageLoading from '@components/PageLoading'
 
-// import App from './App'
+import App from './App'
 
 const Home = Loadable({
     loader: () => import(/* webpackChunkName: "home" */ '../home'),
@@ -18,11 +18,15 @@ const Home = Loadable({
 })
 
 const AppRouter = (
-    <Router>
+    <Router basename='/mobile/pro'>
         <Route path="/" component={props => (
+            <App {...props}>
                 <Switch>
                     <Route exact path="/" component={Home} />
+                    <Route path="/notfound/:transNo/:plan?" component={Home} />
+                    <Redirect to="/notfound" />
                 </Switch>
+            </App>
         )} />
     </Router>
 )

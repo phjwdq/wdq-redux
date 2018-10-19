@@ -7,7 +7,7 @@
 import React from 'react'
 import {render} from 'react-dom'
 import {Provider} from 'react-redux'
-// import configureStore from './store'
+import configureStore from './store' //有数据 用到store
 import AppRouter from './routes'
 
 window.MINIP = window.__wxjs_environment === 'miniprogram'
@@ -35,12 +35,16 @@ wx.ready(() => {
 })
 
 const initialState = {
-
+    home: {}
 }
 
-// const store = configureStore(initialState)
+const store = configureStore(initialState)
+// Provider 需要babel解析
+
 render(
-    AppRouter,
+    <Provider store={store}>
+        {AppRouter}
+    </Provider>,
     document.getElementById('app')
 )
 

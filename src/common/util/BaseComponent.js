@@ -9,9 +9,9 @@ import PropTypes from 'prop-types'
 import {is, List, Map} from 'immutable'
 
 export default class BaseComponent extends Component {
-    // static contextTypes = {
-    //     allData: PropTypes.object.isRequired,
-    // }
+    static contextTypes = {
+        allData: PropTypes.object.isRequired,
+    }
 
     constructor(props, context, updater) {
         super(props, context, updater)
