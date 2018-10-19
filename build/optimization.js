@@ -7,7 +7,7 @@ module.exports =
             runtimeChunk: {
                 name: 'manifest'
             },
-            splitChunks: {
+            splitChunks: {// 分包管理
                 cacheGroups: {
                     default: false,
                     commons: {

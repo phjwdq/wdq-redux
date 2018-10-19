@@ -53,7 +53,7 @@ const prodPlugins = [
     }),
     new MiniCssExtractPlugin({
         filename: "[name].css",
-        chunkFilename: "[name].[id].[hash].css"
+        chunkFilename: "[name].[id].[hash].css"//分包管理 name-id-md5
     }),
 ]
 

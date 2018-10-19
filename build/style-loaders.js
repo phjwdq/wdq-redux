@@ -19,7 +19,7 @@ module.exports = config.extractCss
         },
         {
             test: /\.css$/,
-            include: [resolve('src')],
+            include: [resolve('src')],// src下的css文件
             use: [
                 MiniCssExtractPlugin.loader,
                 "css-loader?importLoaders=1&modules&localIdentName=" + cssModuleAffix,
@@ -62,7 +62,7 @@ module.exports = config.extractCss
                         'style-loader',
                         {
                             loader: 'css-loader',
-                            options: {
+                            options: {//参数 同之上拼接的参数一样
                                 sourceMap: true,
                                 modules: true,
                                 importLoaders: 1,

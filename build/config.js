@@ -9,8 +9,13 @@ if (APP_ENV === 'dev') {
 }
 
 module.exports = {
+    index: path.resolve(__dirname, './../views/index.html'),
+    assetsRoot: path.resolve(__dirname, './../public'),
     assetsPublicPath: env[APP_ENV].feRoot,
     assetsSubDirectory: '',
+    sourceMap: APP_ENV !== 'test',
+    extractCss: APP_ENV !== 'dev',
+    bundleAnalyzerReport: env[APP_ENV].report,
     title: 'redux',
     urlPrefix: '/'
 }
